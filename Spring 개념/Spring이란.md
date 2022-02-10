@@ -33,14 +33,19 @@
 - @responsebody - > bufferedwriter, @requestbody -> bufferedreader를 변환하여 사용
 - reflection api가 가능하다
   - **구체적인 클래스 타입을 알지 못해도** 런타임에 static영역을 참조하여 클래스의 정보(메서드, 타입, 변수 등등)에 접근할 수 있게 해주는 자바 API
+  - 동적으로 클래스를 사용할 수 있게 해주어 DI가 가능하게 해주는 API
 
 ```
 	Sample sample = new Sample();
     sample.doSomething();
 
     // Reflection
-    Class sampleClazz = Class.forName("Sample");
+    Class sampleClazz = Class.forName("클래스명(Sample)");
     Method sampleMethod = sampleClazz.getMethod("doSomething");
     sampleMethod.invoke();
 ```
+
+- 아파치 서버: web server로 client의 요청을 받아 이를 처리하여 정적인 data 처리를 진행하는 서버
+- 톰캣: web application server로 java로 된 file을 client가 읽을 수 있도록 html로 변경하거나, db 트랜잭션과 같은 동적인 처리를 해준다(서블릿 컨테이너)
+  - 아파치서버와 톰캣을 연동하여 쓰는이유? was인 톰캣만을 이용하여 서버를 구현하였을때 정적, 동적데이터를 모두 처리해야 하기때문에 사용자의 요청에의한 응답이 느려지게 될것이다
 
