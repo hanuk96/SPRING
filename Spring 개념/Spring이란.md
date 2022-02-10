@@ -14,9 +14,9 @@
 
 - Filter vs Interceptor
 
-  ![image-20220113110531237](C:\Users\gi718\AppData\Roaming\Typora\typora-user-images\image-20220113110531237.png)
+![image](https://user-images.githubusercontent.com/12428689/153410524-a3f20c03-6e25-4466-8d65-b91029d74bc3.png)
+![image](https://user-images.githubusercontent.com/12428689/153410554-08ad8d74-b7b6-4dad-84d2-2a9ef243b1f4.png)
 
-  ![image-20220113110516760](C:\Users\gi718\AppData\Roaming\Typora\typora-user-images\image-20220113110516760.png)
 
   - Filter: **디스패처 서블릿에 요청이 전달**되기 전/후에 url 에 맞는 모든 요청, 응답에 대한 부가작업을 처리
   - Interceptor: 디스패처 서블릿이 **컨트롤러를 호출**하기 전/후에 요청, 응답을 가공
