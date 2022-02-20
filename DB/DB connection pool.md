@@ -1,4 +1,4 @@
-database를 jdbc를 이용하여 사용하는 방법
+# database를 jdbc를 이용하여 사용하는 방법
 
 1. DB 서버 접속을 위해 JDBC 드라이버를 로드한다.
 2. DB 접속 정보와 DriverManager.getConnection() Method를 통해 DB Connection 객체를 얻는다.
@@ -10,12 +10,11 @@ database를 jdbc를 이용하여 사용하는 방법
 
 
 
-db connection pool이란?
+## db connection pool이란?
 
 1. WAS가 실행되면서 미리 일정량의 DB Connection 객체를 생성하고 `Pool` 이라는 공간에 저장해 둔다.
 2. HTTP 요청에 따라 필요할 때 Pool에서 Connection 객체를 가져다 쓰고 반환한다.
 3. 이와 같은 방식으로 HTTP 요청 마다 DB Driver를 로드하고 물리적인 연결에 의한 Connection 객체를 생성하는 비용이 줄어들게 된다.
-
 
 
 WAS의 Thread는 Connection Pool의 갯수보다 여유있게 설정하는 것이 좋다.
